@@ -1,0 +1,15 @@
+name: The_0mega1 Workshop
+url: "https://the0mega1-workshop.github.io"
+
+collections:
+  mods:
+    output: true
+    permalink: /mods/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "mods"
+    values:
+      layout: mod
+      status: active
