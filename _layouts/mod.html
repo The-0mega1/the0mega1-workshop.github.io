@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<h1>{{ page.title }}</h1>
+
+<p><strong>Game:</strong> {{ page.game }}</p>
+
+<p>{{ page.description }}</p>
+
+<h2>Features</h2>
+<ul>
+{% for f in page.features %}
+<li>{{ f }}</li>
+{% endfor %}
+</ul>
+
+<h2>Downloads</h2>
+
+{% for d in page.downloads %}
+<div class="download">
+
+{% if d.disabled %}
+<span class="disabled">{{ d.name }} (disabled)</span>
+{% else %}
+<a href="{{ d.url }}">{{ d.name }}</a>
+{% endif %}
+
+</div>
+{% endfor %}
